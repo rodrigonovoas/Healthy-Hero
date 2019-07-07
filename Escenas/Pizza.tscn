@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/Pizza.gd" type="Script" id=1]
+[ext_resource path="res://Texturas/pizza.png" type="Texture" id=2]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 10.744
+height = 5.59867
+
+[node name="Pizza" type="KinematicBody2D"]
+position = Vector2( -4.78995, 4.78993 )
+script = ExtResource( 1 )
+
+[node name="Area" type="Area2D" parent="." groups=[
+"enemigos",
+]]
+position = Vector2( -1.36038, 2.72073 )
+scale = Vector2( 0.800504, 1.10764 )
+
+[node name="Shape" type="CollisionShape2D" parent="Area"]
+position = Vector2( 4.69807, -0.618471 )
+scale = Vector2( 2.68845, 0.895333 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 1.36038, 1.36038 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 2 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+position = Vector2( 11.3012, 2.61953 )
+[connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Texturas/descarga.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 395.198, 16.4718 )
+
+[node name="Suelo" type="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -637.136
+margin_top = -355.705
+margin_right = -637.136
+margin_bottom = -355.705
+
+[node name="Body" type="StaticBody2D" parent="."]
+position = Vector2( -290.69, 64.4388 )
+scale = Vector2( 0.75, 1 )
+
+[node name="Shape" type="CollisionShape2D" parent="Body"]
+position = Vector2( 385.273, -69.1321 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="Body"]
+position = Vector2( 382.858, -64.8588 )
+scale = Vector2( 1.3305, 0.955946 )
+texture = ExtResource( 1 )

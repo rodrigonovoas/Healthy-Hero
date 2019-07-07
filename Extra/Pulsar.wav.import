@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Pulsar.wav-d9ff4d26169a58314011d2a1765a7540.sample"
+
+[deps]
+
+source_file="res://Extra/Pulsar.wav"
+dest_files=[ "res://.import/Pulsar.wav-d9ff4d26169a58314011d2a1765a7540.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

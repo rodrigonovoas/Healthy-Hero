@@ -1,0 +1,69 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Scripts/MainCharacter.gd" type="Script" id=1]
+[ext_resource path="res://Texturas/idle1.png" type="Texture" id=2]
+[ext_resource path="res://Texturas/idle2.png" type="Texture" id=3]
+[ext_resource path="res://Texturas/walk1.png" type="Texture" id=4]
+[ext_resource path="res://Texturas/walk2.png" type="Texture" id=5]
+[ext_resource path="res://Extra/Pulsar.wav" type="AudioStream" id=6]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 1.28252
+height = 11.5658
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "idle",
+"speed": 2.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "win",
+"speed": 2.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "run",
+"speed": 4.2
+} ]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 13.6213, 22.0943 )
+
+[node name="MainCharacter" type="KinematicBody2D"]
+script = ExtResource( 1 )
+
+[node name="Shape" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( 0.474009, -0.528973 )
+scale = Vector2( 10.1723, 3.19932 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0.33771, -1.3564 )
+scale = Vector2( 3, 3 )
+frames = SubResource( 2 )
+animation = "win"
+frame = 1
+playing = true
+
+[node name="Area2D" type="Area2D" parent="."]
+editor/display_folded = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
+position = Vector2( 0.677841, -1.03925 )
+shape = SubResource( 3 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+
+[node name="Audio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 6 )
+volume_db = -20.937
+autoplay = true
+[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
+[connection signal="finished" from="Audio" to="." method="_on_Audio_finished"]

@@ -1,0 +1,65 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scripts/MenuEmergente.gd" type="Script" id=1]
+[ext_resource path="res://Texturas/menu_panel.png" type="Texture" id=2]
+[ext_resource path="res://Texturas/mano.png" type="Texture" id=3]
+[ext_resource path="res://Extra/sary-soft/Sary/Fonts/Sary Soft SemiBlod.otf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Extra/sary-soft/Sary/Fonts/Sary Soft SemiBlod.otf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 100
+outline_color = Color( 0.309804, 0.27451, 0.27451, 1 )
+font_data = ExtResource( 4 )
+
+[node name="MenuEmergente" type="Control"]
+script = ExtResource( 1 )
+
+[node name="Continuar" type="Sprite" parent="."]
+position = Vector2( 668.267, 240 )
+scale = Vector2( 1.96327, 1.34536 )
+texture = ExtResource( 2 )
+
+[node name="Salir" type="Sprite" parent="."]
+position = Vector2( 671.607, 370 )
+scale = Vector2( 1.96327, 1.34536 )
+texture = ExtResource( 2 )
+
+[node name="Selector" type="Sprite" parent="."]
+position = Vector2( 250, 240 )
+scale = Vector2( 2.09406, 2.19148 )
+texture = ExtResource( 3 )
+
+[node name="Label_Continuar" type="Label" parent="."]
+modulate = Color( 1, 0, 0.203922, 1 )
+margin_left = 573.257
+margin_top = 186.66
+margin_right = 772.257
+margin_bottom = 291.66
+custom_fonts/font = SubResource( 2 )
+text = "Continuar
+"
+
+[node name="Label_Salir" type="Label" parent="."]
+modulate = Color( 1, 0, 0, 1 )
+margin_left = 581.607
+margin_top = 320.0
+margin_right = 811.607
+margin_bottom = 371.0
+custom_fonts/font = SubResource( 2 )
+text = "Salir"
+
+[node name="Label" type="Label" parent="."]
+modulate = Color( 1, 0.0117647, 0, 1 )
+margin_left = 429.237
+margin_top = 51.7757
+margin_right = 928.237
+margin_bottom = 151.776
+custom_fonts/font = SubResource( 3 )
+text = "GAME OVER"
+max_lines_visible = 0

@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/Chicle.gd" type="Script" id=1]
+[ext_resource path="res://Texturas/chicle_bola.png" type="Texture" id=2]
+[ext_resource path="res://Texturas/fishing_bobbles.png" type="Texture" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 11.493
+
+[node name="Chicle_Nodo" type="Node2D"]
+
+[node name="Body" type="KinematicBody2D" parent="." groups=[
+"enemigos",
+]]
+position = Vector2( 0.857361, 1.71475 )
+script = ExtResource( 1 )
+
+[node name="SpriteInicial" type="Sprite" parent="Body"]
+texture = ExtResource( 2 )
+
+[node name="SpriteFinal" type="Sprite" parent="Body"]
+visible = false
+position = Vector2( 0, -8.29048 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 3 )
+
+[node name="CollisionInicial" type="CollisionShape2D" parent="Body"]
+position = Vector2( -0.73709, 0.0773957 )
+shape = SubResource( 1 )
+
+[node name="CollisionFinal" type="CollisionPolygon2D" parent="Body"]
+visible = false
+position = Vector2( 0, -8.29048 )
+scale = Vector2( 5, 5 )
+polygon = PoolVector2Array( 0.993991, -2.96442, 4.22036, -1.74556, 6.22789, -1.24368, 7.37504, -0.59841, 9.52595, -0.455014, 9.52595, 0.763836, 9.95614, 2.34118, 9.16747, 3.27324, 7.80522, 3.12985, 7.30334, 4.06191, -6.31912, 3.70342, -8.61343, 2.98645, -9.4738, 1.7676, -9.61719, 0.548746, -7.75306, -0.526712, -4.45499, -0.813501, -2.94935, -1.96066, -0.511649, -3.10781 )
+disabled = true
