@@ -46,7 +46,6 @@ position = Vector2( 0.33771, -1.3564 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 2 )
 animation = "win"
-frame = 1
 playing = true
 
 [node name="Area2D" type="Area2D" parent="."]

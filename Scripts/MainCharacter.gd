@@ -3,25 +3,12 @@ extends KinematicBody2D
 onready var animation = get_node("Sprite")
 onready var audio = get_node("Audio")
 
-const pausa = preload("res://Escenas/Pausa.tscn")
 const GRAVITY = 250
 const WALK_SPEED = 230
 
 var velocity = Vector2() 
 var puede_saltar = true
 var temporizador
-
-func _ready():
-	#audio.stream.loop = true
-	pass
-
-#func _input(event):
-#	if Input.is_action_pressed("ui_accept") and VarGlobal.pausado == false:
-#		print("ok2")
-#		VarGlobal.pausado = true
-#		var instanciar_pausa = pausa.instance()
-#		get_tree().paused = true
-#		get_tree().get_root().get_child(2).add_child(instanciar_pausa)
 
 func _physics_process(delta):
 	velocity.y += delta * GRAVITY * 2
