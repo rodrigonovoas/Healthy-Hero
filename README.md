@@ -20,6 +20,7 @@ Some things we find in this project:
 - Object instancing (easy ones and others with their own timers and conditions)
 - Simple object / enemy AI
 - Character movement (right, left and double jump)
+- Simple life system
 - Simple animations
 - Scene changes
 - UI basics 
