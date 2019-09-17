@@ -18,9 +18,9 @@ SPACE - Jump (twice = double jump)
 What we can see in this project?
 
 This game is mostly created as a first step to learn how to program and organize a project in Godot Engine.
-Hence, it will be normal to see some mistakes in both fields, but at least I have learnt a lot of new things I can implement in my new projects (which hopefully will be bigger and better than this) :^)
+Hence, it will be normal to see some mistakes in both fields, but at least I have learnt a lot of new things which I can implement in my new projects (which hopefully will be bigger and better than this one) :^)
 
-Some things we find in this project:
+Some things we can find in this project:
 
 - Object instancing (easy ones and others with their own timers and conditions)
 - Simple object / enemy AI
