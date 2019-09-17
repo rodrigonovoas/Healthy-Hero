@@ -3,7 +3,7 @@
 ![captura](https://user-images.githubusercontent.com/49367885/63115676-fd2c0c00-bf97-11e9-928f-fdd87181c4bc.PNG)
 
 
-In this mini-game we can see a hero figthing for avoiding unhealthy food.
+In this mini-game we can see a hero fighting for avoiding unhealthy food.
 So, this game consists in avoiding all kind of obstacles coming from the sky (and from the lateral sides of the screen) moving our character to the right, to the left and jumping (double jump is available).
 We have 3 levels with their own 'obstacles', and each level is completed by holding on an amount of time (never more than 2 minutes).
 
